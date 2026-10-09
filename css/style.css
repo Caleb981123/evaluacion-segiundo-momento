@@ -1,0 +1,512 @@
+/* =========================================================
+   VARIABLES DE IDENTIDAD VISUAL Y RESET BASICO
+   ========================================================= */
+:root {
+    /* Color corporativo principal: Gris pizarra / azulado neutro */
+    --color-principal: #8b909a; 
+    /* Color corporativo secundario: Blanco */
+    --color-secundario: #ffffff; 
+    /* Color complementario: Verde salvia / menta suave */
+    --color-complementario: #a8e6cf; 
+    /* Tonos oscuros para textos e interacciones */
+    --color-texto: #2d3748; 
+    --color-fondo-suave: #f7f9fa;
+    --color-borde: #e2e8f0;
+}
+
+/* Reset básico de márgenes y caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografías corporativas */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-secundario);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #1a202c;
+}
+
+/* Regla para imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos de títulos de secciones */
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   1. HEADER / ENCABEZADO
+   ========================================================= */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--color-secundario);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 26px;
+    color: var(--color-principal);
+    margin: 0;
+}
+
+.logo span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #666666;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.menu a:hover {
+    color: var(--color-principal);
+    background-color: var(--color-fondo-suave);
+}
+
+/* =========================================================
+   2. HERO SECCIÓN
+   ========================================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    background-color: var(--color-fondo-suave);
+    gap: 40px;
+}
+
+.hero-columna-texto {
+    flex: 1;
+}
+
+.etiqueta {
+    background-color: var(--color-complementario);
+    color: #1a5336;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero-columna-texto h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-columna-texto h2 {
+    font-size: 22px;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.hero-columna-texto p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #4a5568;
+}
+
+.boton-cta {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.boton-cta:hover {
+    background-color: #6c717b;
+}
+
+.hero-columna-imagen {
+    flex: 1;
+}
+
+.hero-columna-imagen img {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* =========================================================
+   3. SECCIÓN NOSOTROS
+   ========================================================= */
+.nosotros {
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+    gap: 40px;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--color-principal);
+}
+
+.nosotros-texto p {
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   4. SECCIÓN PRODUCTOS
+   ========================================================= */
+.productos {
+    padding: 60px 5%;
+    background-color: var(--color-fondo-suave);
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto-tarjeta {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.producto-tarjeta:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.producto-tarjeta img {
+    border-radius: 6px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.producto-tarjeta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.producto-tarjeta p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.boton-tarjeta {
+    display: block;
+    text-align: center;
+    background-color: var(--color-complementario);
+    color: #1a5336;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-tarjeta:hover {
+    background-color: #8edec0;
+}
+
+/* =========================================================
+   5. SECCIÓN SERVICIOS
+   ========================================================= */
+.servicios {
+    padding: 60px 5%;
+}
+
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.servicio-tarjeta {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-secundario);
+}
+
+.icono-servicio {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.servicio-tarjeta h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   6. SECCIÓN TABLA
+   ========================================================= */
+.tabla-seccion {
+    padding: 60px 5%;
+    background-color: var(--color-fondo-suave);
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+.tabla-precios {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--color-secundario);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla-precios th, .tabla-precios td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-precios th {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    font-size: 16px;
+}
+
+.tabla-precios tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* =========================================================
+   7. SECCIÓN GALERÍA
+   ========================================================= */
+.galeria {
+    padding: 60px 5%;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-item img:hover {
+    opacity: 0.85;
+}
+
+/* =========================================================
+   8. FORMULARIO DE CONTACTO
+   ========================================================= */
+.contacto {
+    padding: 60px 5%;
+    background-color: var(--color-fondo-suave);
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-secundario);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.campo input, 
+.campo select, 
+.campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.boton-enviar {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.boton-enviar:hover {
+    background-color: #6c717b;
+}
+
+/* =========================================================
+   9. FOOTER / PIE DE PÁGINA
+   ========================================================= */
+.pie-pagina {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    padding: 40px 5% 20px 5%;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-columna h3, .footer-columna h4 {
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.footer-columna p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-derechos {
+    text-align: center;
+    border-top: 1px solid #2d3748;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #a0aec0;
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVE (MEDIA QUERIES)
+   ========================================================= */
+@media (max-width: 768px) {
+    /* Header en pantallas pequeñas */
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* Hero pasa de 2 columnas a 1 columna */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    /* Nosotros pasa de 2 columnas a 1 columna */
+    .nosotros {
+        flex-direction: column;
+    }
+
+    /* Ajustes generales de tarjetas y galería */
+    .producto-tarjeta, 
+    .servicio-tarjeta, 
+    .galeria-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
